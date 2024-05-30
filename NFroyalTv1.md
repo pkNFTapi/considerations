@@ -15,7 +15,7 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
-     ```
+    ```
 ERC721URIStorage: Extension of ERC721 for managing token URIs
 Ownable: Provides basic access control mechanisms
 Strings: Library for string operations
