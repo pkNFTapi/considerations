@@ -8,7 +8,7 @@
 When writing an upgradeable contract, replace constructors with initializer functions. 
 # example upgradeable ERC-721 contract:
 
-``solidity
+```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
