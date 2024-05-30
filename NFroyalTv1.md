@@ -85,6 +85,16 @@ Handles the transfer of a token with a royalty payment.
     Emits RoyaltyPaid and NFTTransferred events.
 
 setRoyaltyPercentage Function
+```bash
+function setRoyaltyPercentage(uint256 _royaltyPercentage) external onlyOwner {
+```
+Allows the contract owner to set a new royalty percentage.
+
+    _royaltyPercentage: New royalty percentage.
+    Ensures the percentage is within the valid range (0 to 100).
+
+tokenURI Function
+
 
 
 
