@@ -98,6 +98,25 @@ tokenURI Function
 function tokenURI(uint256 tokenId) public view override returns (string memory) {
 ```
 
+Returns the URI of a given token.
+
+    tokenId: ID of the token.
+    Requires the token to be owned.
+    Constructs and returns the full URI.
+
+receive Function
+```bash
+receive() external payable {
+```
+
+```bash
+```
+
+
+```bash
+```
+
+
 
 
 
