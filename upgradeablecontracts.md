@@ -1,6 +1,5 @@
 # Steps to Create and Deploy Upgradeable Contracts
 
-    Installation:
     Install the upgradeable contracts package from OpenZeppelin:
 ```bash
     npm install @openzeppelin/contracts-upgradeable
