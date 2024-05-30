@@ -1,128 +1,106 @@
 The NFroyalT contract is an ERC721 token contract that incorporates a royalty mechanism. This mechanism ensures that the original creator of the token receives a royalty payment upon the sale of any token. The royalty can be either a fixed amount or a percentage of the sale price, providing flexibility in how royalties are managed.
 Contract Components
+```bash
+   //pragma solidity ^0.8.20;
+   //Specifies the Solidity compiler version used for the contract, ensuring compatibility with Solidity version 0.8.20 and above
 
-    Pragma Directive
+   // Imports
     
-   ```bash
-    pragma solidity ^0.8.20;
-    ```
-    
-    Specifies the Solidity compiler version used for the contract, ensuring compatibility with Solidity version 0.8.20 and above
-
-    Imports
-    ```bash
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
     ```
-ERC721URIStorage: Extension of ERC721 for managing token URIs
-Ownable: Provides basic access control mechanisms
-Strings: Library for string operations
-ReentrancyGuard: Protection against reentrancy attacks
+//ERC721URIStorage: Extension of ERC721 for managing token URIs
+//Ownable: Provides basic access control mechanisms
+//Strings: Library for string operations
+//ReentrancyGuard: Protection against reentrancy attacks
 
-state varialbes:
-```bash
+//state varialbes:
+
 uint256 public tokenCounter;
 address payable public immutable creator;
 uint256 public immutable fixedRoyalty;
 uint256 public royaltyPercentage;
-```
-Events
-```bash
+
+//Events
+
 event RoyaltyPaid(address indexed recipient, uint256 amount);
 event NFTTransferred(address indexed from, address indexed to, uint256 tokenId, uint256 salePrice);
-```
-RoyaltyPaid: Emitted when a royalty payment is made
-NFTTransferred: Emitted when a token is transferred
 
-constructor:
+//RoyaltyPaid: Emitted when a royalty payment is made
+//NFTTransferred: Emitted when a token is transferred
 
-```bash
+
 constructor(
     address payable _creator,
     uint256 _fixedRoyalty,
     uint256 _royaltyPercentage,
     address initialOwner
 ) ERC721("NFroyalT", "NFTR") Ownable(initialOwner) {
-```
 
 
-The constructor initializes the contract with the creator's address, fixed royalty amount, royalty percentage, and initial owner.
 
-    _creator: Address of the royalty recipient
-    _fixedRoyalty: Fixed royalty amount
-    _royaltyPercentage: Percentage of the sale price to be paid as royalty
-    initialOwner: Initial owner of the contract
+//The constructor initializes the contract with the creator's address, fixed royalty amount, royalty percentage, and initial owner.
 
-createNFTR Function
-```bash
+// _creator: Address of the royalty recipient
+// _fixedRoyalty: Fixed royalty amount
+//  _royaltyPercentage: Percentage of the sale price to be paid as royalty
+//  initialOwner: Initial owner of the contract
+
+// createNFTR Function
+
 function createNFTR(string memory _tokenURI) public onlyOwner returns (uint256) {
-```
-Allows the contract owner to create a new NFT.
 
-    _tokenURI: URI for the token metadata
-    Returns the ID of the newly created token
+// Allows the contract owner to create a new NFT.
 
-    brokerTransfer Function
+//    _tokenURI: URI for the token metadata
+//    Returns the ID of the newly created token
 
-    ```bash
+//    brokerTransfer Function
+
+  
     function brokerTransfer(
     address from,
     address to,
     uint256 tokenId,
     uint256 salePrice
 ) public payable nonReentrant {
-```
-Handles the transfer of a token with a royalty payment.
+r of a token with a royalty payment.
 
-    from: Current owner of the token.
-    to: New owner of the token.
-    tokenId: ID of the token being transferred.
-    salePrice: Sale price of the token.
-    Ensures the payment is sufficient and authorized by the token owner.
-    Calculates and transfers the royalty to the creator.
-    Transfers the remaining amount to the seller.
-    Emits RoyaltyPaid and NFTTransferred events.
+ // from: Current owner of the token.
+   // to: New owner of the token.
+   // tokenId: ID of the token being transferred.
+//salePrice: Sale price of the token.
+    //Ensures the payment is sufficient and authorized by the token owner.
+   // Calculates and transfers the royalty to the creator.
+    //Transfers the remaining amount to the seller.
+   // Emits RoyaltyPaid and NFTTransferred events.
 
 setRoyaltyPercentage Function
 
  ```bash
 function setRoyaltyPercentage(uint256 _royaltyPercentage) external onlyOwner {
 ```
-Allows the contract owner to set a new royalty percentage.
+//Allows the contract owner to set a new royalty percentage.
 
     _royaltyPercentage: New royalty percentage.
     Ensures the percentage is within the valid range (0 to 100).
 
-tokenURI Function
+// tokenURI Function
 ```bash
 function tokenURI(uint256 tokenId) public view override returns (string memory) {
 ```
 
-Returns the URI of a given token.
+//Returns the URI of a given token.
 
-    tokenId: ID of the token.
-    Requires the token to be owned.
-    Constructs and returns the full URI.
+ //   tokenId: ID of the token.
+//    Requires the token to be owned.
+ //   Constructs and returns the full URI.
 
-receive Function
-```bash
+//receive Function
+
 receive() external payable {
-```
-
-```bash
-```
-
-
-```bash
-```
-
-
-
-
-
-
 
 
     
