@@ -47,6 +47,7 @@ constructor(
 ) ERC721("NFroyalT", "NFTR") Ownable(initialOwner) {
 ```
 
+
 The constructor initializes the contract with the creator's address, fixed royalty amount, royalty percentage, and initial owner.
 
     _creator: Address of the royalty recipient
