@@ -29,4 +29,4 @@ Summary
     ERC-721 is ideal for applications where uniqueness is critical, such as digital art and unique collectibles. However, it comes with higher gas fees for minting and managing each token individually.
     ERC-1155 offers a more versatile and gas-efficient solution, especially beneficial for applications that involve both unique and fungible assets. Its batch operations and shared metadata capabilities make it a more cost-effective choice for large-scale data exchanges and asset management.
 
-For further details, you can refer to the OpenZeppelin documentation on ERC-721 and the ERC-1155 standard​ (Documentation - OpenZeppelin Docs)​​ (Documentation - OpenZeppelin Docs)​.
+For further details, you can refer to the OpenZeppelin documentation on ERC-721 and the ERC-1155 standard​ <a href="https://docs.openzeppelin.com/contracts/5.x/">(Documentation - OpenZeppelin Docs)</a>​​
