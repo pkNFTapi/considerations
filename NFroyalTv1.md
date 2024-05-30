@@ -1,6 +1,6 @@
 The NFroyalT contract is an ERC721 token contract that incorporates a royalty mechanism. This mechanism ensures that the original creator of the token receives a royalty payment upon the sale of any token. The royalty can be either a fixed amount or a percentage of the sale price, providing flexibility in how royalties are managed.
 Contract Components
-```bash
+
    //pragma solidity ^0.8.20;
    //Specifies the Solidity compiler version used for the contract, ensuring compatibility with Solidity version 0.8.20 and above
 
@@ -66,16 +66,17 @@ function createNFTR(string memory _tokenURI) public onlyOwner returns (uint256) 
     uint256 tokenId,
     uint256 salePrice
 ) public payable nonReentrant {
-r of a token with a royalty payment.
 
- // from: Current owner of the token.
-   // to: New owner of the token.
-   // tokenId: ID of the token being transferred.
-//salePrice: Sale price of the token.
-    //Ensures the payment is sufficient and authorized by the token owner.
-   // Calculates and transfers the royalty to the creator.
-    //Transfers the remaining amount to the seller.
-   // Emits RoyaltyPaid and NFTTransferred events.
+ Handles the transfer of a token with a royalty payment.
+
+    from: Current owner of the token.
+    to: New owner of the token.
+    tokenId: ID of the token being transferred.
+    salePrice: Sale price of the token.
+    Ensures the payment is sufficient and authorized by the token owner.
+    Calculates and transfers the royalty to the creator.
+    Transfers the remaining amount to the seller.
+    Emits RoyaltyPaid and NFTTransferred events.
 
 // setRoyaltyPercentage Function
 
