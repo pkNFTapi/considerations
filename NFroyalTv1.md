@@ -94,6 +94,9 @@ Allows the contract owner to set a new royalty percentage.
     Ensures the percentage is within the valid range (0 to 100).
 
 tokenURI Function
+```bash
+function tokenURI(uint256 tokenId) public view override returns (string memory) {
+```
 
 
 
