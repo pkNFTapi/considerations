@@ -27,7 +27,9 @@ contract MyUpgradeableNFT is Initializable, ERC721Upgradeable, OwnableUpgradeabl
 
 
 
-<a href="https://docs.openzeppelin.com/learn/upgrading-smart-contracts">upgrading smart contracts</a>
-<a href="https://docs.openzeppelin.com/contracts/5.x/upgradeable">npm install @openzeppelin/contracts-upgradeable @openzeppelin/contracts</a>
+<a href="https://docs.openzeppelin.com/learn/upgrading-smart-contracts">upgrading smart contracts</a><br />
+<a href="https://docs.openzeppelin.com/contracts/5.x/upgradeable">npm install @openzeppelin/contracts-upgradeable @openzeppelin/contracts</a><br />
+<a href="https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable/blob/master/contracts/access/OwnableUpgradeable.sol">OwnableUpgradeable.sol</a><br />
+<a href="https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable/blob/master/contracts/access/AccessControlUpgradeable.sol">AccessControlUpgradeable.sol</a><br />
 
 
