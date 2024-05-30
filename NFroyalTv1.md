@@ -2,9 +2,11 @@ The NFroyalT contract is an ERC721 token contract that incorporates a royalty me
 Contract Components
 
     Pragma Directive
+    
     ```bash
     pragma solidity ^0.8.20;
     ```
+    
     Specifies the Solidity compiler version used for the contract, ensuring compatibility with Solidity version 0.8.20 and above
 
     Imports
