@@ -60,8 +60,31 @@ function createNFTR(string memory _tokenURI) public onlyOwner returns (uint256) 
 ```
 Allows the contract owner to create a new NFT.
 
-    _tokenURI: URI for the token metadata.
-    Returns the ID of the newly created token.
+    _tokenURI: URI for the token metadata
+    Returns the ID of the newly created token
+
+    brokerTransfer Function
+
+    ```bash
+    function brokerTransfer(
+    address from,
+    address to,
+    uint256 tokenId,
+    uint256 salePrice
+) public payable nonReentrant {
+```
+Handles the transfer of a token with a royalty payment.
+
+    from: Current owner of the token.
+    to: New owner of the token.
+    tokenId: ID of the token being transferred.
+    salePrice: Sale price of the token.
+    Ensures the payment is sufficient and authorized by the token owner.
+    Calculates and transfers the royalty to the creator.
+    Transfers the remaining amount to the seller.
+    Emits RoyaltyPaid and NFTTransferred events.
+
+setRoyaltyPercentage Function
 
 
 
