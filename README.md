@@ -1,2 +1,2 @@
 # considerations
-documentation of thoughts around token utility
+documentation and thoughts to create token utility
