@@ -1,4 +1,4 @@
-# mintNFTr function
+# mintNFTr function in FILNFroyalT.sol
 
     Function Purpose:
         The mintNFTr function is used by the contract owner to mint a new NFT (Non-Fungible Token) and store associated data on the Filecoin network.
