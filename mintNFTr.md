@@ -1,7 +1,7 @@
-Detailed Explanation of mintNFTR
+# mintNFTr function
 
     Function Purpose:
-        The mintNFTR function is used by the contract owner to mint a new NFT (Non-Fungible Token) and store associated data on the Filecoin network.
+        The mintNFTr function is used by the contract owner to mint a new NFT (Non-Fungible Token) and store associated data on the Filecoin network.
 
     Access Control:
         The function is marked external and onlyOwner, meaning it can only be called from outside the contract and only by the contract owner. This is ensured by the onlyOwner modifier provided by the Ownable contract.
@@ -32,4 +32,4 @@ Detailed Explanation of mintNFTR
 
 Summary
 
-The mintNFTR function is an essential part of the contract's functionality, allowing the owner to create new NFTs and link them with data stored on the Filecoin network. Each step in the function plays a crucial role in ensuring the NFT is properly minted, its metadata is set, and the associated data is stored and retrievable. This process involves incrementing a counter for unique token IDs, minting the token, setting its metadata URI, storing the associated data on Filecoin, and emitting an event to log the action.
+The mintNFTr function is an essential part of the contract's functionality, allowing the owner to create new NFTs and link them with data stored on the Filecoin network. Each step in the function plays a crucial role in ensuring the NFT is properly minted, its metadata is set, and the associated data is stored and retrievable. This process involves incrementing a counter for unique token IDs, minting the token, setting the erc-721 metadata URI, storing the associated data on Filecoin, and emitting an event to log the action.
