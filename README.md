@@ -4,4 +4,5 @@ integration and testing zone for the pkNFTapi suite of NFT utility that includes
 storage.chainsafe is the easiest onboarding to filecoin so far
 LIT for encryption and experimental PKP
 Filecoin for serious data integrity
+<a href="https://github.com/orgs/pkNFTapi/discussions/1">inquiries</a>
 
